@@ -1,0 +1,82 @@
+{% extends 'navbar/navbar.html' %}
+{% load static %}
+
+<!doctype html>
+<html>
+
+<head>
+  <title id="title">add job opportunities</title>
+
+</head>
+
+<body>
+  {% block content %}
+  
+  <div class="form-shape">
+
+    <form method="post" action="{% url 'add_new_job' %}" id="form">
+      {% csrf_token %}
+      <div class="title"> 
+        <h2>Add new job</h2>
+      </div>
+      <div class="input-box">
+
+      <div class="input-box">
+        <label for="tit">
+          <bold>job title </bold>
+        </label>
+        <br />
+        <input type="text" name="title" id="tit">
+      </div>
+
+      <div class="input-box">
+        <label for="sal">
+          <bold>salary </bold>
+        </label>
+        <br />
+        <input type="number" step="200" min="1000" max="100000" name="salary" id="sal">
+      </div>
+
+      <div class="input-box">
+        <label for="comp">
+          <bold>company name </bold>
+        </label>
+        <br />
+        <input type="text" name="company_name" id="comp">
+      </div>
+      <div class="input-box">
+        job status
+      </div>
+      <div class="input-box">
+        <input type="radio" name="status" id="opened" value="opened" checked>
+        <label for="opened">opened</label>
+
+      </div>
+
+      <div class="input-box">
+        <input type="radio" name="status" id="closed" value="closed">
+        <label for="closed">closed</label>
+      </div>
+
+
+      <div class="input-box">
+        <label for="exp">years of experience </label>
+        <input type="number" name="years_of_exp" min="0" max="40" id="exp">
+      </div>
+
+      <div class="input-box">
+        <label for="desc">description </label>
+        <textarea style="background-color:white;" name="description" cols="50" rows="6" id="desc"></textarea>
+      </div>
+
+      <div class="input-box-submit" style="width:250px;">
+        <input class="button" type="submit">
+      </div>
+    </form>
+  </div>
+  <script src="{% static 'javascript/addnewjop.js' %}"></script>
+  {% endblock content %}
+  
+</body>
+
+</html>

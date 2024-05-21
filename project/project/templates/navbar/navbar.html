@@ -1,0 +1,39 @@
+{% load static %}
+
+<!doctype html>
+<html>
+<head>
+  <title id="title">add job opportunities</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+</head>
+<body>
+
+<div class="navbarMain">
+    <!--  -->
+    <div class="name">
+        <h3>Job Vacations</h3>
+    </div>
+    <div class="sign">
+        <!-- profile info -->
+        <div class="profile">
+            <!--<img src="./Images/profile.png" alt="" width="20px" height="20px">-->
+            <p>Username</p>
+        </div>
+
+        <!-- signout button
+        <div class="button">
+            <button>
+                <a href="../../Common_Pages/Log_in/Log_in.html">
+                    Signout
+                </a>
+            </button>
+        </div> -->
+    </div>
+</div>
+
+{% block content %}
+{% endblock content %}
+
+</body>
+</html>

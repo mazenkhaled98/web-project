@@ -1,0 +1,30 @@
+{% extends 'navbar/navbar.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Head content -->
+</head>
+<body>
+    {% block content %}
+    <div id="content">
+        <div style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+            <h2 class="center-text">New job opportunity</h2> 
+            <ul id="job-opportunity">
+                <li>
+                    <strong>Title:</strong> <span id="job-title"></span><br><br>
+                    <strong>Salary:</strong> <span id="salary"></span><br><br>
+                    <strong>Company:</strong> <span id="company-name"></span><br><br>
+                    <strong>Job status:</strong> <span id="job-status"></span><br><br>
+                    <strong>Job Description:</strong> <span id="job-description"></span><br><br>
+                    <strong>Years of experience:</strong> <span id="years-of-exp"></span><br><br>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="{% static 'javascript/viewjop.js' %}"></script>
+    {% endblock content %}
+</body>
+</html>
