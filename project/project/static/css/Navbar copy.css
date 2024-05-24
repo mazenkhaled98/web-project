@@ -1,0 +1,49 @@
+/* navbar styles */
+.navbar {
+    height: 50px;
+    background-color: #333;
+    color: white;
+    padding-left: 15px;
+}
+
+
+.nav_left_side {
+    width: 60%;
+    float: left;
+}
+
+.nav_right_side {
+    width: 35%;
+    float: right;
+}
+
+.nav_right_side .profile {
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav_right_side .account_name {
+    display: inline-block
+}
+
+.btn_sign_out_container {
+    display: inline-block;
+}
+
+.btn_sign_out_container button {
+    padding: 5px 15px;
+    border: 0;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    border-radius: 8px;
+    color: white;
+}
+
+.btn_sign_out_link,
+.add_new_job_container a {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+}
+
+/* end navbar styles */

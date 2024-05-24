@@ -1,0 +1,91 @@
+.Left_Container {
+    width: 60%;
+    height: 100vh;
+    position: fixed;
+}
+
+.Left_Container img {
+    width: 100%;
+    height: 100%;
+    float: left;
+
+}
+
+.Rigt_Container {
+    float: right;
+    width: 40%;
+}
+
+
+.Rigt_Container .header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.Rigt_Container .header h1 {
+    margin-top: 0;
+    padding-top: 8%;
+}
+
+.Rigt_Container .header>p {
+    font-weight: bold;
+    color: #333;
+}
+
+.Rigt_Container form {
+    padding-top: 30px;
+    padding-left: 10px;
+    /* margin-left: 10%; */
+    margin-top: 5%;
+}
+
+.Rigt_Container form label {
+    float: left;
+    width: 25%;
+    margin-bottom: 5px;
+}
+
+.Rigt_Container form>div>input[type='text'],
+.Rigt_Container form>div>input[type='password'],
+.Rigt_Container form>div>input[type='email'] {
+
+    padding: 5px;
+    width: 60%;
+    font-size: 10px;
+}
+
+.company_label {
+    margin-bottom: 10px;
+    display: block;
+    /* color: rgb(90, 117, 90); */
+    font-weight: bold;
+}
+
+.is_not_company_admin,
+.is_company_admin {
+    width: max-content !important;
+    float: none !important;
+}
+
+
+.btn_submit {
+    /* background-color: rgb(90, 117, 90); */
+    color: white;
+    border: 0;
+    padding: 10px 30px;
+
+}
+
+.btn_sign_in {
+    background-color: #999;
+    color: #9d9c9e;
+    padding: 10px 15px;
+    border: 0;
+
+}
+
+.btn_sign_in a {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+}

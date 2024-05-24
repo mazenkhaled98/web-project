@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign_UP</title>
+    <!-- Load static template tag library -->
+    {% load static %}
+    <!-- css external common  -->
+    <link rel="stylesheet" href="{% static 'css/Style2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Sign_Up.css' %}">
+</head>
+
+<body>
+    <!-- img -->
+    <div class="Left_Container">
+        <img src="{% static 'image/job.png' %}" alt="Job">
+    </div>
+
+    <div class="Rigt_Container">
+        <div class="header">
+            <h1 class="base_color">Job Vaccitions</h1>
+            <p>We are here to help you get vaccinated, Login now</p>
+        </div>
+        <!-- error alert  -->
+        <div class="alert display_none"> Please fill again the required fields</div>
+        <!-- success alert -->
+        <div class="success_alert display_none"> New Account is registerd successfully </div>
+
+        <!-- signup form -->
+        <form>
+
+            <!-- username -->
+            <div>
+                <label>Username:</label>
+                <input type="text" required id="username">
+            </div>
+            <br>
+            <!-- password -->
+            <div style="width: 100%;">
+                <label> Password:</label>
+                <input type="password" required id="pass" value="">
+            </div>
+            <br>
+            <!-- confirm password -->
+            <div>
+                <label>Confirm Password:</label>
+                <input type="password" required id="confirm_pass" value="">
+                <div class="alert display_none not_matched_pass_alert"> Password and Confirm Password not matched</div>
+            </div>
+            <br>
+            <!-- email -->
+            <div>
+                <label>Email:</label>
+                <input type="email" required id="email">
+            </div>
+            <br>
+            <!-- company admin -->
+            <div>
+                <div class="company_label">Please choose if you have a company</div>
+                <div id="role_option">
+                    <input id="is_company_admin" type="radio" value="True" name="role_option" class="company_option">
+                    <label class='is_company_admin' for="is_company_admin"> True </label>
+                    <input id="is_not_company_admin" type="radio" value="false" name="role_option"
+                        class="company_option" checked>
+                    <label class='is_not_company_admin' for="is_not_company_admin"> False </label>
+                </div>
+                <br>
+                <div class="company_details_container hide">
+                    <label for="company name">Company Name</label>
+                    <input id="company" type="text">
+                </div>
+            </div>
+            <br>
+            <!-- button signup -->
+            <div class="text_center">
+                <button class="btn_submit base_color_bg radius">Submit</button>
+                <p>If you have an account</p>
+                <button class="btn_sign_in">
+                    <a href="/" class="radius">Sign-in Now</a>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="{% static 'javascript/Sign.js' %}"></script>
+</body>
+
+</html>

@@ -18,8 +18,12 @@ from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
+
     path('admin/', admin.site.urls),
     path('addnewjop/', include('addnewjop.urls')),
     path('editjop/', include('editjop.urls')),
     path('viewjop/', include('viewjop.urls')),
+    
+    path('', include('Auth.urls')),
+
 ]
