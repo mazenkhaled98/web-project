@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job Vacations</title>
+
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <!-- navbar -->
+    <link rel="stylesheet" href="{% static 'css/Navbar2.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/HomePage.css' %}">
+</head>
+
+<body style="padding: 0; margin: 0;">
+    <!-- header -->
+    <!-- navbar -->
+    <div class="navbar">
+        <!--  -->
+        <div class="nav_left_side">
+            <h3> Job Vacations </h3>
+        </div>
+        <div class="nav_right_side">
+            <!-- profile info -->
+            <div class="profile">
+                <img src="{% static 'image/profile.png' %}" alt="" width="20px" height="20px">
+                <p class="account_name" id="account_name">Username</p>
+            </div>
+
+            <!-- signout button -->
+            <div class="btn_sign_out_container">
+                <button class="base_color_bg">
+                    Signout
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- view all jobs which created by this admin -->
+    <div class="view_all_jobs_container">
+        <h1 class="text_center"> View Cretaed Jobs </h1>
+
+        <!-- Add new job -->
+        <div class="add_new_job_container">
+            <button>
+                <a href="/addnewjop">
+                    Add New Job
+                </a>
+            </button>
+        </div>
+
+        <table class="view_all_jobs_table">
+
+            <!-- table headers -->
+            <tr>
+                <th>Job Title </th>
+                <th> Company </th>
+                <th> Status </th>
+
+            </tr>
+            {% if all_jobs %}
+            {% for job in all_jobs %}
+            <tr>
+                <td>{{ job.title }}</td>
+                <td>{{ job.company_name }}</td>
+                <td>{{ job.salary }}</td>
+                <td>
+                    <button class='btn_view_details'>
+                        <a href="/viewjop"> View Details</a>
+                    </button>
+                </td>
+                <td>
+                    <button class='btn_edit'>
+                        <a href="/editjop"> Edit </a>
+                    </button>
+                </td>
+
+                <td>
+                    <button class='btn_delete'>
+                        <a> Delete</a>
+                    </button>
+                </td>
+
+            </tr>
+            {% endfor %}
+
+
+            {% else %}
+            <tr class="alert display_none no_jobs_alert">
+                <td colspan="4"> No Jobs are created </td>
+            </tr>
+            {% endif %}
+
+
+
+            <!-- details will append using js DOM -->
+
+        </table>
+
+
+    </div>
+
+    <script src="{% static 'javascript/HomePage.js' %}"></script>
+    <script src="{% static 'javascript/Navbar2.js' %}"></script>
+    <!-- <script src="{% static 'javascript/View_All_Jobs.js' %}"></script> -->
+
+</body>
+
+</html>

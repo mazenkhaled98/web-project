@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <!-- Load static template tag library -->
+    {% load static %}
+    <!-- css external common -->
+    <link rel="stylesheet" href="{% static 'css/Style2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Login.css' %}">
+</head>
+
+<body>
+    <!-- img -->
+    <div class="login_container">
+        <img src="{% static 'image/job.png' %}" alt="Job">
+    </div>
+
+    <div class="login_right_side">
+        <div class="header">
+            <h1 class="base_color">Job Vaccinations</h1>
+            <p>We are here to help you get vaccinated, Login now</p>
+        </div>
+        <div class="alert display_none" id="login_error_msg"> username or password not correct, please try again!!</div>
+
+        <!-- signup form -->
+        <form>
+            <!-- action="{% static 'Admin/HomePage/HomePage.html' %}"> -->
+            <!-- username -->
+            <div>
+                <label>Username:</label>
+                <input type="text" required id="username">
+            </div>
+            <br>
+            <!-- password -->
+            <div style="width: 100%;">
+                <label>Password:</label>
+                <input type="password" required id="pass" value="">
+            </div>
+            <br>
+
+            <!-- buttons (login & signup) -->
+            <div class="btns_container text_center">
+                <button class="btn_submit base_color_bg radius">
+                    Submit
+                </button>
+
+                <div class="text_center">
+                    <p>If you don't have Account</p>
+                    <button class="btn_sign_up">
+                        <a href="/Sign_Up" class="radius">Create new Account</a>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="{% static 'javascript/Login_v2.js' %}"></script>
+</body>
+
+</html>

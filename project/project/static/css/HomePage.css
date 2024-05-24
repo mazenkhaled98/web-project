@@ -1,0 +1,61 @@
+.view_all_jobs_container {
+    margin-top: 20px;
+}
+
+.add_new_job_container {
+    float: right;
+    margin-right: 12%;
+    margin-bottom: 10px;
+}
+
+.add_new_job_container button {
+    background-color: rgb(57, 66, 85);
+    padding: 10px;
+    border: 0;
+}
+
+.view_all_jobs_table {
+    text-align: center;
+    margin: 5% 8%;
+    background-color: #efefef;
+    width: 80%;
+    padding: 10px 5px;
+}
+
+.view_all_jobs_table th {
+    padding-bottom: 20px;
+}
+
+.btn_view_details,
+.btn_edit,
+.btn_delete {
+    background-color: rgb(35, 74, 116);
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border: 0;
+    color: white !important;
+
+}
+
+.btn_view_details a,
+.btn_edit a,
+.btn_delete a {
+    text-decoration: none;
+    /* padding: 15px 20px; */
+    color: white !important;
+}
+
+.btn_edit {
+    background-color: rgb(28, 117, 72);
+}
+
+.btn_delete {
+    background-color: #711a50;
+    ;
+}
+
+.alert {
+    width: 100%;
+    padding-left: 60%;
+    margin-left: 10%;
+}
