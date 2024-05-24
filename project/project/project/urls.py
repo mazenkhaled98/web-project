@@ -25,5 +25,7 @@ urlpatterns = [
     path('viewjop/', include('viewjop.urls')),
     
     path('', include('Auth.urls')),
+    path('HomePage', include('viewAllJobs.urls')),
+
 
 ]

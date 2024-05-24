@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'viewjop.apps.ViewjopConfig',
     'editjop.apps.EditjopConfig',
     'addnewjop.apps.AddnewjopConfig',
+    'viewAllJobs.apps.ViewalljobsConfig',
+
     'Auth.apps.AuthConfig',
     'django.contrib.admin',
     'django.contrib.auth',

@@ -1,15 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .navbarMain {
     height: 55px;
     background: linear-gradient(-135deg, #390536, #3e0646);
     color: white;
-    padding-left: 15px;
+    padding: 5px;
     margin-bottom: 20px;
     margin-left: 0;
+
+
 }
 
 .name {

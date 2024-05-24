@@ -62,13 +62,42 @@
                 <th>Job Title </th>
                 <th> Company </th>
                 <th> Status </th>
-                <th> </th>
-                <th> </th>
-                <th> </th>
+
             </tr>
+            {% if all_jobs %}
+            {% for job in all_jobs %}
+            <tr>
+                <td>{{ job.title }}</td>
+                <td>{{ job.company_name }}</td>
+                <td>{{ job.salary }}</td>
+                <td>
+                    <button class='btn_view_details'>
+                        <a href="/viewjop"> View Details</a>
+                    </button>
+                </td>
+                <td>
+                    <button class='btn_edit'>
+                        <a href="/editjop"> Edit </a>
+                    </button>
+                </td>
+
+                <td>
+                    <button class='btn_delete'>
+                        <a> Delete</a>
+                    </button>
+                </td>
+
+            </tr>
+            {% endfor %}
+
+
+            {% else %}
             <tr class="alert display_none no_jobs_alert">
                 <td colspan="4"> No Jobs are created </td>
             </tr>
+            {% endif %}
+
+
 
             <!-- details will append using js DOM -->
 
@@ -79,7 +108,7 @@
 
     <script src="{% static 'javascript/HomePage.js' %}"></script>
     <script src="{% static 'javascript/Navbar2.js' %}"></script>
-    <script src="{% static 'javascript/View_All_Jobs.js' %}"></script>
+    <!-- <script src="{% static 'javascript/View_All_Jobs.js' %}"></script> -->
 
 </body>
 

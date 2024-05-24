@@ -16,7 +16,9 @@ def get_job_data(request):
             'years_of_exp': job.years_of_exp,
             'description': job.description,
         }
-        return JsonResponse(job_data)
+        # return JsonResponse(job_data)
+        return render(request, 'editjop/editjop.html' , job_data)
+
     else:
         return JsonResponse({'error': 'No job data found'}, status=404)
     

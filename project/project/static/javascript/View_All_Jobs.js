@@ -61,6 +61,8 @@ for (var i = 0; i < jobs_related_to_admin.length; i++) {
     btn_delete_id = btn_delete.setAttribute('id', jobs_related_to_admin[i]['ID'])
 
 
+
+
     // a:href of buttons
     btn_view_details_link = document.createElement('a')
     btn_edit_link = document.createElement('a')
