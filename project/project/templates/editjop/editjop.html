@@ -8,43 +8,55 @@
 </head>
 
 <html>
+
 <body>
     {% block content %}
     <div class="form-shape">
-        <form method="post" id="form" action="{% url 'edit_job' %}">
-            {% csrf_token %}
 
+        <form method="post" id="form" action="{% url 'edit_jop' job.title %}">
+            {% csrf_token %}
             <div class="title">
                 <h2>Edit Job</h2>
             </div>
             <div class="input-box">
-                <label for="tit"><bold>Job Title</bold></label><br>
-                <input type="text" name="title" id="tit">
+                <label for="tit">
+                    <bold>Job Title</bold>
+                </label><br>
+                <input type="text" name="title" id="tit" placeholder="{{ job.title }}">
             </div>
             <div class="input-box">
-                <label for="sal"><bold>Salary</bold></label><br>
-                <input type="number" step="200" min="1000" max="100000" name="salary" id="sal" >
+                <label for="sal">
+                    <bold>Salary</bold>
+                </label><br>
+                <input type="number" step="200" min="1000" max="100000" name="salary" id="sal"
+                    placeholder="{{ job.salary }}">
             </div>
             <div class="input-box">
-                <label for="comp"><bold>Company Name</bold></label><br>
-                <input type="text" name="company_name" id="comp" >
+                <label for="comp">
+                    <bold>Company Name</bold>
+                </label><br>
+                <input type="text" name="company_name" id="comp" placeholder="{{ job.company }}">
             </div>
             <div class="input-box">
                 Job Status<br>
-             
-                <input type="radio" name="status" id="opened"  checked  >
+
+                <input type="radio" name="status" id="opened" checked>
                 <label for="opened">Opened</label><br>
-               
+
                 <input type="radio" name="status" id="closed" checked>
                 <label for="closed">Closed</label>
             </div>
             <div class="input-box">
-                <label for="exp"><bold>Years of Experience</bold></label><br>
-                <input type="number" name="years_of_exp" min="0" max="40" id="exp" >
+                <label for="exp">
+                    <bold>Years of Experience</bold>
+                </label><br>
+                <input type="number" name="years_of_exp" placeholder="{{ job.years_of_exp }}" min="0" max="40" id="exp">
             </div>
-           
+
             <div class="input-box">
-                <label for="desc"><bold>Description</bold></label><br>
+                <label for="desc">
+                    <bold>Description</bold>
+                </label><br>
                 <textarea name="description" cols="50" rows="6" id="desc"></textarea>
             </div>
             <div class="input-box-submit">
@@ -53,6 +65,9 @@
         </form>
     </div>
     <script src="{% static 'javascript/editjop.js' %}"></script>
+
     {% endblock content %}
+
 </body>
+
 </html>

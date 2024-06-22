@@ -7,6 +7,7 @@ class Job(models.Model):
     is_opened = models.BooleanField(default=True)
     years_of_exp = models.IntegerField()
     description = models.TextField(null=True,blank=True)
+    apply = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title

@@ -7,18 +7,15 @@ def view(request):
 
 def view_job_opportunity(request):
     # Fetch the job opportunity data from the addnewjop app
-    job = Job.objects.first()  # Assuming you want to retrieve the first job entry
+      # Fetch the job opportunity data from the addnewjop app
+    title = request.GET.get('title')
+    titlevalue = title.replace('%20', '')
+    
+    selected_job = Job.objects.filter(title__icontains = titlevalue)
+  # Assuming you want to retrieve the first job entry
+    if selected_job:
+        return render(request, 'viewjop/viewjop.html', {'job': selected_job[0]})
 
-    if job:
-        job_data = {
 
-            'title': job.title,
-            'salary': str(job.salary),
-            'company_name': job.company_name,
-            'status': job.is_opened,
-            'description': job.description,
-            'years_of_exp': job.years_of_exp
-        }
-        return JsonResponse(job_data)
     else:
-        return JsonResponse({'error': 'No job data found'}, status=404)
+        return render(request, 'viewjop/viewjop.html', {'job': []})
