@@ -1,0 +1,66 @@
+body {
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    margin-left: 5px;
+    margin-bottom: 10px;
+    color: #711a50;
+}
+
+form {
+    background-color: white;
+    border-radius: 10px;
+    width: 40%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    color: #711a50;
+    border-color: transparent;
+    border-width: 5px;
+    border-style: ridge;
+}
+
+label {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: solid;
+    box-sizing: border-box;
+    color: #711a50;
+}
+
+input[type="file"] {
+    width: 50%;
+    padding: 5px;
+    color: #711a50;
+}
+
+input[type="submit"] {
+    background-color: #fff;
+    color: linear-gradient(-135deg, #c850c0, #4158d0);
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 500px;
+    margin-top: 0px;
+}
+
+input[type="submit"]:hover {
+    background-color: #711a50;
+    color: white;
+}

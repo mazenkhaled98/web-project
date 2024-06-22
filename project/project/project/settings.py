@@ -33,9 +33,10 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'viewjop.apps.ViewjopConfig',
     'editjop.apps.EditjopConfig',
+    'delete_job.apps.DeleteJobConfig',
     'addnewjop.apps.AddnewjopConfig',
     'viewAllJobs.apps.ViewalljobsConfig',
-
+    'UserApp.apps.UserappConfig',
     'Auth.apps.AuthConfig',
     'django.contrib.admin',
     'django.contrib.auth',

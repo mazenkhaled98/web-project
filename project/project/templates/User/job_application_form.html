@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="{% static 'css/Job Applying.css' %}">
+</head>
+
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Apply">
+    </form>
+    <script src="{% static 'javascript/Job Appling.js'%}"></script>
+</body>
+
+</html>

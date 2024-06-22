@@ -14,9 +14,11 @@ btn_submit.addEventListener('click', function (e) {
     // get all accounts 
     var accounts = localStorage.getItem('Accounts');
     accounts_js = JSON.parse(accounts);
-
+    var flag = 0;
     accounts_js.forEach(acc => {
+
         if (acc.username == username && acc.pass == pass) {
+            flag = 1;
             login_error_msg.classList.add('display_none')
             acc_json = JSON.stringify(acc);
             localStorage.setItem('current_account', acc_json);
@@ -27,29 +29,26 @@ btn_submit.addEventListener('click', function (e) {
 
                 // will redirect to admin pages
                 //location.href = 'pages/HomePage.html'
-                location.href = '/HomePage'
-
-
+                console.log(acc.company)
+                location.href = `/HomePage/?company=${acc.company}`
             }
             else {
 
                 // role = 2 ==> user role
                 // will redirect to admin pages
-                location.href = '../../User/home.html'
+                location.href = '/User/all_jobs'
 
             }
         }
         else {
             //show error msg
-            login_error_msg.classList.remove('display_none')
+            flag = 0;
 
         }
+
     });
-
-
+    if (flag = 0) {
+        login_error_msg.classList.remove('display_none')
+    }
 
 })
-
-
-
-

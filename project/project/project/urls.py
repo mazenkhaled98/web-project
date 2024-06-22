@@ -22,10 +22,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('addnewjop/', include('addnewjop.urls')),
     path('editjop/', include('editjop.urls')),
+    path('deletejob/', include('delete_job.urls')),
+
     path('viewjop/', include('viewjop.urls')),
     
     path('', include('Auth.urls')),
-    path('HomePage', include('viewAllJobs.urls')),
+    path('HomePage/', include('viewAllJobs.urls')),
+    path('User/', include('UserApp.urls')),
+
 
 
 ]

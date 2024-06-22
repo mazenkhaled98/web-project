@@ -72,18 +72,19 @@
                 <td>{{ job.salary }}</td>
                 <td>
                     <button class='btn_view_details'>
-                        <a href="/viewjop"> View Details</a>
+                        <a href="{% url 'view_job_opportunity' %}?title={{ job.title }}"> View Details</a>
                     </button>
                 </td>
                 <td>
                     <button class='btn_edit'>
-                        <a href="/editjop"> Edit </a>
+                        <a href="{% url 'edit_jop' job.title %}"> Edit</a>
+
                     </button>
                 </td>
 
                 <td>
                     <button class='btn_delete'>
-                        <a> Delete</a>
+                        <a href="{% url 'deletejob' job.title %}"> Delete</a>
                     </button>
                 </td>
 
